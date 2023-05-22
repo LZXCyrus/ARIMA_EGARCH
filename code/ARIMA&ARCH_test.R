@@ -1,4 +1,4 @@
-dat <- read.csv('./data.csv',header = T)
+dat <- read.csv('./data/data.csv',header = T)
 data <- ts(dat[,4],start = c(1,1),frequency = 365)#change dat[,i]
 
 models <- data.frame(par = c(0),aic = c(0));r <-1 
