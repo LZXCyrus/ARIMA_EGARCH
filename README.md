@@ -19,31 +19,30 @@ A simple example on how to use ARIMA_EGARCH models to analyze and predict time s
 ```
 filetree 
 ├── /code/
-│  ├── ADF检验.py
-│  ├── ARIMA模型白噪声检验.R
-│  ├── GARCH衍生模型选择.R
-│  ├── 部分画图代码.py
-│  ├── 建立ARIMA模型与ARCH检验.R
-│  ├── 建立GARCH模型.R
-│  ├── 建立GARCH模型后的ARCH检验.R
-│  ├── 预测.R
+│  ├── ADF_test.py
+│  ├── Ljung-Box_test.R
+│  ├── improved_GARCH.R
+│  ├── ARIMA&ARCH_test.R
+│  ├── GARCH.R
+│  ├── GARCH&ARCH_test.R
+│  ├── prediction.R
 ├── /data/
 │  ├── data.csv
 │  ├── data_for_rollingforecast.csv
 
 ```
 
-### 文件内容说明
+### Document Description
 
 ##### 1. data
 - **data.csv**：training data
 - **data_for_rollingforecast.csv**：training data and test data for prediction
 
 ##### 2. code
-- **ADF检验.py**：检验数据平稳性
-- **建立ARIMA模型与ARCH检验.R**：选择适合的ARIMA模型，对拟合好的ARIMA模型做ARCH检验
-- **ARIMA模型白噪声检验.R**：对拟合好的ARIMA模型做白噪声检验
-- **建立GARCH模型.R**：选择合适的基础GARCH模型
-- **建立GARCH模型后的ARCH检验.R**：对拟合好的ARIMA-GARCH模型做ARCH检验，确认GARCH的有效性
-- **GARCH衍生模型选择.R**：选择适合的GARCH衍生模型
+- **ADF_test.py**：Use Augmented Dickey-Fuller test to check the data stationarity
+- **ARIMA&ARCH_test.R**：Select the appropriate ARIMA model and do ARCH test on the well-fitted ARIMA model
+- **Ljung-Box_test.R**：Do Ljung-Box test on the fitted ARIMA model
+- **GARCH.R**：Select the appropriate base fundamental GARCH model
+- **GARCH&ARCH_test.R**：Do ARCH test on the fitted ARIMA-GARCH model to confirm the validity of GARCH
+- **improved_GARCH.R**：Select the appropriate improved GARCH model
 - **prediction.R**：Make rolling predictions for the short and long term
